@@ -7,6 +7,7 @@ script:
  — bin/rails db:migrate
  — bundle exec rspec
 services: "— postgresql"
+dist: trusty
 deploy:
   provider: heroku
   api_key:
