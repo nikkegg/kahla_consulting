@@ -1,14 +1,13 @@
-language: "— ruby"
-rvm: — 2.6.6
-cache: "— bundler"
-before_install:
-    - gem install bundler
+language: ruby
+rvm: 2.6.6
+cache: bundler
+before_install: gem install bundler
 script:
  — bundle install
  — bin/rails db:create
  — bin/rails db:migrate
  — bundle exec rspec
-services: "— postgresql"
+services: postgresql
 dist: trusty
 deploy:
   provider: heroku
