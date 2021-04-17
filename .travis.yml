@@ -13,6 +13,8 @@ script:
   - bundle exec rake test
 services: postgresql
 dist: trusty
+addons:
+  postgresql: "13.2"
 deploy:
   provider: heroku
   api_key:
