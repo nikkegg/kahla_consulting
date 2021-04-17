@@ -12,7 +12,7 @@ before_script:
   - yarn
   - bundle exec rake db:create
 script:
-  - bundle exec rake test
+  - bundle exec rspec spec/hello_world_spec.rb
 services: postgresql
 deploy:
   provider: heroku
