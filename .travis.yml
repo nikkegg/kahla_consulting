@@ -1,5 +1,6 @@
 language: ruby
 rvm: 2.6.6
+# dist: trusty
 cache: bundler
 before_install:
  - gem install bundler
@@ -12,9 +13,8 @@ before_script:
 script:
   - bundle exec rake test
 services: postgresql
-dist: trusty
-addons:
-  postgresql: "13.2"
+# addons:
+#   postgresql: "13.2"
 deploy:
   provider: heroku
   api_key:
